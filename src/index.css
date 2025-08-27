@@ -1,15 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Portfolio Design System - Modern & Professional */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
+    
+    /* Portfolio Brand Colors */
+    --portfolio-primary: 217 91% 60%;
+    --portfolio-primary-dark: 217 91% 50%;
+    --portfolio-secondary: 142 76% 36%;
+    --portfolio-accent: 262 83% 58%;
+    --portfolio-neutral: 215 16% 47%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 96%));
+    --gradient-skill: linear-gradient(90deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(217 91% 60% / 0.1), 0 2px 4px -1px hsl(217 91% 60% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(217 91% 60% / 0.1), 0 4px 6px -2px hsl(217 91% 60% / 0.05);
+    --shadow-large: 0 20px 25px -5px hsl(217 91% 60% / 0.1), 0 10px 10px -5px hsl(217 91% 60% / 0.04);
+    
+    /* Animation Tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -100,6 +121,50 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Portfolio Specific Components */
+  .portfolio-hero-bg {
+    background: var(--gradient-hero);
+  }
+  
+  .portfolio-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+  }
+  
+  .portfolio-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+  }
+  
+  .skill-progress {
+    background: var(--gradient-skill);
+  }
+  
+  .text-portfolio-primary {
+    color: hsl(var(--portfolio-primary));
+  }
+  
+  .text-portfolio-neutral {
+    color: hsl(var(--portfolio-neutral));
+  }
+  
+  .bg-portfolio-primary {
+    background-color: hsl(var(--portfolio-primary));
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
   }
 }

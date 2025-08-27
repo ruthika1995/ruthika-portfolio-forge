@@ -18,12 +18,22 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Portfolio Brand Colors
+				'portfolio-primary': 'hsl(var(--portfolio-primary))',
+				'portfolio-primary-dark': 'hsl(var(--portfolio-primary-dark))',
+				'portfolio-secondary': 'hsl(var(--portfolio-secondary))',
+				'portfolio-accent': 'hsl(var(--portfolio-accent))',
+				'portfolio-neutral': 'hsl(var(--portfolio-neutral))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
