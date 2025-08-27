@@ -7,14 +7,14 @@ const Leadership = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Leadership & <span className="text-portfolio-primary">Impact</span>
+              Leadership & <span className="minimal-accent">Impact</span>
             </h2>
-            <div className="w-24 h-1 bg-portfolio-primary mx-auto"></div>
+            <div className="w-24 h-1 bg-portfolio-minimal mx-auto"></div>
           </div>
 
           <div className="portfolio-card p-12 rounded-xl hover-lift">
             <div className="flex justify-center mb-8">
-              <div className="p-6 bg-gradient-to-r from-portfolio-secondary to-portfolio-accent rounded-full">
+              <div className="p-6 bg-gradient-to-r from-portfolio-minimal to-gray-600 rounded-full">
                 <Users className="w-12 h-12 text-white" />
               </div>
             </div>
@@ -31,31 +31,31 @@ const Leadership = () => {
 
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
-                <div className="p-4 bg-portfolio-primary/10 rounded-lg mb-4 inline-block">
-                  <Users className="w-8 h-8 text-portfolio-primary" />
+                <div className="p-4 bg-portfolio-minimal/20 rounded-lg mb-4 inline-block">
+                  <Users className="w-8 h-8 minimal-accent" />
                 </div>
                 <h4 className="font-semibold text-foreground">50+ Students</h4>
                 <p className="text-portfolio-neutral">Mentored</p>
               </div>
 
               <div className="text-center">
-                <div className="p-4 bg-portfolio-secondary/10 rounded-lg mb-4 inline-block">
-                  <Lightbulb className="w-8 h-8 text-portfolio-secondary" />
+                <div className="p-4 bg-gray-600/20 rounded-lg mb-4 inline-block">
+                  <Lightbulb className="w-8 h-8 text-gray-400" />
                 </div>
                 <h4 className="font-semibold text-foreground">Innovation</h4>
                 <p className="text-portfolio-neutral">Focused</p>
               </div>
 
               <div className="text-center">
-                <div className="p-4 bg-portfolio-accent/10 rounded-lg mb-4 inline-block">
-                  <Award className="w-8 h-8 text-portfolio-accent" />
+                <div className="p-4 bg-portfolio-minimal/10 rounded-lg mb-4 inline-block">
+                  <Award className="w-8 h-8 minimal-accent" />
                 </div>
                 <h4 className="font-semibold text-foreground">Leadership</h4>
                 <p className="text-portfolio-neutral">Skills</p>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-portfolio-primary/5 to-portfolio-accent/5 rounded-lg">
+            <div className="mt-8 p-6 bg-gradient-to-r from-portfolio-minimal/10 to-gray-600/5 rounded-lg">
               <p className="text-portfolio-neutral italic">
                 "Passionate about empowering the next generation of developers and fostering 
                 a collaborative learning environment where innovation thrives."

@@ -31,12 +31,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Get In <span className="text-portfolio-primary">Touch</span>
+              Get In <span className="minimal-accent">Touch</span>
             </h2>
             <p className="text-xl text-portfolio-neutral max-w-2xl mx-auto">
               I'm always open to discussing new opportunities and interesting projects
             </p>
-            <div className="w-24 h-1 bg-portfolio-primary mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-portfolio-minimal mx-auto mt-4"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -57,14 +57,14 @@ const Contact = () => {
                     <a
                       key={index}
                       href={item.href}
-                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-portfolio-primary/5 transition-colors duration-300 group"
+                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-portfolio-minimal/10 transition-colors duration-300 group"
                     >
-                      <div className="p-3 bg-gradient-to-r from-portfolio-primary to-portfolio-accent rounded-lg">
+                      <div className="p-3 bg-gradient-to-r from-portfolio-minimal to-gray-600 rounded-lg">
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <p className="font-medium text-portfolio-neutral">{item.label}</p>
-                        <p className="text-foreground group-hover:text-portfolio-primary transition-colors">
+                        <p className="text-foreground group-hover:text-portfolio-minimal transition-colors">
                           {item.value}
                         </p>
                       </div>
@@ -78,7 +78,7 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     <a
                       href="#"
-                      className="p-3 bg-gradient-to-r from-portfolio-primary to-portfolio-primary-dark rounded-lg text-white hover:scale-110 transition-transform duration-300"
+                      className="p-3 bg-gradient-to-r from-portfolio-minimal to-gray-600 rounded-lg text-white hover:scale-110 transition-transform duration-300"
                     >
                       <Github className="w-5 h-5" />
                     </a>
@@ -107,7 +107,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       placeholder="Your first name"
-                      className="border-portfolio-primary/20 focus:border-portfolio-primary"
+                      className="border-portfolio-minimal/30 focus:border-portfolio-minimal bg-portfolio-secondary"
                     />
                   </div>
                   <div>
@@ -116,7 +116,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       placeholder="Your last name"
-                      className="border-portfolio-primary/20 focus:border-portfolio-primary"
+                      className="border-portfolio-minimal/30 focus:border-portfolio-minimal bg-portfolio-secondary"
                     />
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                   <Input 
                     type="email"
                     placeholder="your.email@example.com"
-                    className="border-portfolio-primary/20 focus:border-portfolio-primary"
+                    className="border-portfolio-minimal/30 focus:border-portfolio-minimal bg-portfolio-secondary"
                   />
                 </div>
 
@@ -138,7 +138,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     placeholder="What's this about?"
-                    className="border-portfolio-primary/20 focus:border-portfolio-primary"
+                    className="border-portfolio-minimal/30 focus:border-portfolio-minimal bg-portfolio-secondary"
                   />
                 </div>
 
@@ -149,14 +149,14 @@ const Contact = () => {
                   <Textarea 
                     placeholder="Tell me about your project or just say hello..."
                     rows={5}
-                    className="border-portfolio-primary/20 focus:border-portfolio-primary"
+                    className="border-portfolio-minimal/30 focus:border-portfolio-minimal bg-portfolio-secondary"
                   />
                 </div>
 
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-portfolio-primary hover:bg-portfolio-primary-dark"
+                  className="w-full bg-portfolio-minimal hover:bg-gray-600"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message

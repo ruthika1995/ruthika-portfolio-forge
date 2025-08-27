@@ -35,12 +35,12 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Featured <span className="text-portfolio-primary">Projects</span>
+              Featured <span className="minimal-accent">Projects</span>
             </h2>
             <p className="text-xl text-portfolio-neutral max-w-2xl mx-auto">
               Showcasing my passion for creating innovative solutions through code
             </p>
-            <div className="w-24 h-1 bg-portfolio-primary mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-portfolio-minimal mx-auto mt-4"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -82,7 +82,7 @@ const Projects = () => {
                       {project.tech.map((tech, techIndex) => (
                         <span 
                           key={techIndex} 
-                          className="px-3 py-1 bg-portfolio-primary/10 text-portfolio-primary rounded-full text-xs font-medium"
+                          className="px-3 py-1 bg-portfolio-minimal/20 text-portfolio-neutral rounded-full text-xs font-medium"
                         >
                           {tech}
                         </span>
@@ -94,7 +94,7 @@ const Projects = () => {
                   <div className="flex space-x-3">
                     <Button 
                       size="sm" 
-                      className="flex-1 bg-portfolio-primary hover:bg-portfolio-primary-dark"
+                      className="flex-1 bg-portfolio-minimal hover:bg-gray-600"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code
@@ -102,7 +102,7 @@ const Projects = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary hover:text-white"
+                      className="flex-1 border-portfolio-minimal text-portfolio-minimal hover:bg-portfolio-minimal hover:text-white"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
@@ -122,7 +122,7 @@ const Projects = () => {
               <p className="text-portfolio-neutral mb-4">
                 Check out my GitHub for additional projects and contributions
               </p>
-              <Button className="bg-portfolio-primary hover:bg-portfolio-primary-dark">
+              <Button className="bg-portfolio-minimal hover:bg-gray-600">
                 <Github className="w-4 h-4 mr-2" />
                 View All Projects
               </Button>

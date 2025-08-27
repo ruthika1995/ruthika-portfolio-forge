@@ -26,7 +26,7 @@ const Skills = () => {
         { name: "React", level: 75 },
         { name: "Chart.js", level: 70 }
       ],
-      color: "from-portfolio-accent to-portfolio-secondary"
+      color: "from-portfolio-minimal to-portfolio-accent"
     },
     {
       title: "Database Systems",
@@ -37,7 +37,7 @@ const Skills = () => {
         { name: "Query Optimization", level: 65 },
         { name: "Data Modeling", level: 70 }
       ],
-      color: "from-portfolio-secondary to-portfolio-primary"
+      color: "from-gray-600 to-portfolio-primary"
     },
     {
       title: "Soft Skills",
@@ -49,7 +49,7 @@ const Skills = () => {
         { name: "Problem Solving", level: 85 },
         { name: "Teamwork", level: 90 }
       ],
-      color: "from-portfolio-primary to-portfolio-accent"
+      color: "from-portfolio-minimal to-gray-500"
     }
   ];
 
@@ -59,12 +59,12 @@ const Skills = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              My <span className="text-portfolio-primary">Skills</span>
+              My <span className="minimal-accent">Skills</span>
             </h2>
             <p className="text-xl text-portfolio-neutral max-w-2xl mx-auto">
               A comprehensive overview of my technical expertise and soft skills
             </p>
-            <div className="w-24 h-1 bg-portfolio-primary mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-portfolio-minimal mx-auto mt-4"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -82,10 +82,10 @@ const Skills = () => {
                     <div key={skillIndex} className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-portfolio-neutral font-medium">{skill.name}</span>
-                        <span className="text-portfolio-primary font-semibold">{skill.level}%</span>
+                        <span className="minimal-accent font-semibold">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div 
+                      <div className="w-full bg-portfolio-secondary rounded-full h-2">
+                        <div
                           className={`bg-gradient-to-r ${category.color} h-2 rounded-full transition-all duration-1000 ease-out`}
                           style={{ width: `${skill.level}%` }}
                         ></div>

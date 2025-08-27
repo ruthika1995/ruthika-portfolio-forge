@@ -8,25 +8,27 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
     
-    /* Portfolio Brand Colors */
-    --portfolio-primary: 217 91% 60%;
-    --portfolio-primary-dark: 217 91% 50%;
-    --portfolio-secondary: 142 76% 36%;
-    --portfolio-accent: 262 83% 58%;
-    --portfolio-neutral: 215 16% 47%;
+    /* Dark Minimalist Brand Colors */
+    --portfolio-primary: 0 0% 85%;
+    --portfolio-primary-dark: 0 0% 70%;
+    --portfolio-secondary: 0 0% 15%;
+    --portfolio-accent: 0 0% 25%;
+    --portfolio-neutral: 0 0% 60%;
+    --portfolio-minimal: 210 40% 50%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 96%));
-    --gradient-skill: linear-gradient(90deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    /* Dark Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 6%), hsl(0 0% 10%));
+    --gradient-skill: linear-gradient(90deg, hsl(0 0% 20%), hsl(0 0% 30%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
     
-    /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(217 91% 60% / 0.1), 0 2px 4px -1px hsl(217 91% 60% / 0.06);
-    --shadow-medium: 0 10px 15px -3px hsl(217 91% 60% / 0.1), 0 4px 6px -2px hsl(217 91% 60% / 0.05);
-    --shadow-large: 0 20px 25px -5px hsl(217 91% 60% / 0.1), 0 10px 10px -5px hsl(217 91% 60% / 0.04);
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-large: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
     
     /* Animation Tokens */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -127,7 +129,7 @@
 }
 
 @layer components {
-  /* Portfolio Specific Components */
+  /* Dark Portfolio Specific Components */
   .portfolio-hero-bg {
     background: var(--gradient-hero);
   }
@@ -136,11 +138,13 @@
     background: var(--gradient-card);
     box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
+    border: 1px solid hsl(0 0% 15%);
   }
   
   .portfolio-card:hover {
     box-shadow: var(--shadow-medium);
     transform: translateY(-2px);
+    border-color: hsl(0 0% 25%);
   }
   
   .skill-progress {
@@ -159,6 +163,10 @@
     background-color: hsl(var(--portfolio-primary));
   }
   
+  .bg-portfolio-dark {
+    background-color: hsl(var(--portfolio-secondary));
+  }
+  
   .hover-lift {
     transition: var(--transition-smooth);
   }
@@ -166,5 +174,13 @@
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-large);
+  }
+  
+  .minimal-accent {
+    color: hsl(var(--portfolio-minimal));
+  }
+  
+  .bg-minimal-accent {
+    background-color: hsl(var(--portfolio-minimal));
   }
 }
