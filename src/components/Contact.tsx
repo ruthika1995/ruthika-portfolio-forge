@@ -23,8 +23,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Github, label: "GitHub", href: "https://github.com/ruthika1995" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/shakkarikonda-ruthika-bb037134b" },
     { icon: Mail, label: "Email", href: "mailto:ruthika7784@gmail.com" },
   ];
 
