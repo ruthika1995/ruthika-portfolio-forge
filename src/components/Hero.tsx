@@ -59,8 +59,8 @@ const Hero = () => {
           <div className="flex justify-center space-x-4 pt-8">
             {[
               { icon: Mail, href: "mailto:ruthika7784@gmail.com", label: "Email" },
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              { icon: Github, href: "https://github.com/ruthika1995", label: "GitHub" },
+              { icon: Linkedin, href: "https://linkedin.com/in/shakkarikonda-ruthika-bb037134b", label: "LinkedIn" },
             ].map(({ icon: Icon, href, label }) => (
               <a 
                 key={label}
