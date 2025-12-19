@@ -1,4 +1,4 @@
-import { Code, Database, Wrench, Users } from 'lucide-react';
+import { Code, Wrench, Brain } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -8,86 +8,82 @@ const Skills = () => {
       skills: [
         { name: "Python", level: 85 },
         { name: "Java", level: 75 },
-        { name: "Machine Learning", level: 80 },
-        { name: "SQL", level: 70 },
+        { name: "SQL", level: 80 },
+        { name: "Machine Learning", level: 78 },
+        { name: "C Programming", level: 70 },
         { name: "HTML/CSS", level: 85 },
-        { name: "C Programming", level: 70 }
-      ],
-      color: "from-portfolio-primary to-portfolio-primary-dark"
+      ]
     },
     {
-      title: "Tools & Technologies", 
+      title: "Tools & Technologies",
       icon: Wrench,
       skills: [
         { name: "Google Colab", level: 90 },
         { name: "WEKA", level: 75 },
-        { name: "VS Code", level: 85 },
-        { name: "Flask", level: 70 },
-        { name: "React", level: 75 },
-        { name: "Chart.js", level: 70 }
-      ],
-      color: "from-portfolio-minimal to-portfolio-accent"
-    },
-    {
-      title: "Database Systems",
-      icon: Database,
-      skills: [
-        { name: "MySQL", level: 75 },
-        { name: "Database Design", level: 70 },
-        { name: "Query Optimization", level: 65 },
-        { name: "Data Modeling", level: 70 }
-      ],
-      color: "from-gray-600 to-portfolio-primary"
+        { name: "VS Code", level: 88 },
+        { name: "Git", level: 72 },
+        { name: "React", level: 70 },
+        { name: "Flask", level: 75 },
+      ]
     },
     {
       title: "Soft Skills",
-      icon: Users,
+      icon: Brain,
       skills: [
         { name: "Communication", level: 90 },
         { name: "Leadership", level: 85 },
-        { name: "Time Management", level: 80 },
-        { name: "Problem Solving", level: 85 },
-        { name: "Teamwork", level: 90 }
-      ],
-      color: "from-portfolio-minimal to-gray-500"
+        { name: "Time Management", level: 88 },
+        { name: "Problem Solving", level: 92 },
+        { name: "Team Collaboration", level: 87 },
+        { name: "Adaptability", level: 85 },
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-24 bg-white/[0.01] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              My <span className="minimal-accent">Skills</span>
+          <div className="text-center mb-20">
+            <span className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4 block">Expertise</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Skills & <span className="text-white/50">Abilities</span>
             </h2>
-            <p className="text-xl text-portfolio-neutral max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise and soft skills
-            </p>
-            <div className="w-24 h-1 bg-portfolio-minimal mx-auto mt-4"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {skillCategories.map((category, index) => (
-              <div key={index} className="portfolio-card p-8 rounded-xl hover-lift">
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>
-                    <category.icon className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {skillCategories.map((category, categoryIndex) => (
+              <div
+                key={category.title}
+                className="group p-8 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.04] transition-all duration-500"
+                style={{ animationDelay: `${categoryIndex * 100}ms` }}
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+                    <category.icon className="w-6 h-6 text-white/70" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
+                  <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
                 </div>
 
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-portfolio-neutral font-medium">{skill.name}</span>
-                        <span className="minimal-accent font-semibold">{skill.level}%</span>
+                <div className="space-y-5">
+                  {category.skills.map((skill, index) => (
+                    <div key={skill.name} className="group/skill">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white/70 text-sm group-hover/skill:text-white/90 transition-colors">
+                          {skill.name}
+                        </span>
+                        <span className="text-white/40 text-xs">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-portfolio-secondary rounded-full h-2">
+                      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                         <div
-                          className={`bg-gradient-to-r ${category.color} h-2 rounded-full transition-all duration-1000 ease-out`}
-                          style={{ width: `${skill.level}%` }}
+                          className="h-full bg-gradient-to-r from-white/30 to-white/60 rounded-full transition-all duration-700 ease-out group-hover/skill:from-white/40 group-hover/skill:to-white/80"
+                          style={{ 
+                            width: `${skill.level}%`,
+                            transitionDelay: `${index * 50}ms`
+                          }}
                         ></div>
                       </div>
                     </div>

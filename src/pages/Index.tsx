@@ -1,3 +1,4 @@
+import ParticlesBackground from '@/components/ParticlesBackground';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
@@ -8,14 +9,17 @@ import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Leadership />
-      <Contact />
+    <div className="min-h-screen bg-background relative">
+      <ParticlesBackground />
+      <div className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Education />
+        <Projects />
+        <Leadership />
+        <Contact />
+      </div>
     </div>
   );
 };

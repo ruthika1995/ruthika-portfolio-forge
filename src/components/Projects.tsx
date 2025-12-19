@@ -1,108 +1,98 @@
-import { ExternalLink, Github, Heart, Leaf, BarChart3 } from 'lucide-react';
+import { ExternalLink, Github, Heart, Sprout, BarChart3, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
     {
       title: "Heart Health Prediction",
-      description: "Advanced machine learning model for predicting heart disease risk using patient data. Built with comprehensive data preprocessing and multiple ML algorithms for accurate predictions.",
-      tech: ["Flask", "React", "Python", "Scikit-learn", "Pandas"],
+      description: "ML-powered web application for predicting cardiovascular disease risk using patient health metrics.",
+      techStack: ["Flask", "React", "Python", "Scikit-learn"],
       icon: Heart,
-      gradient: "from-red-500 to-pink-500",
-      features: ["Real-time prediction", "Data visualization", "Risk assessment"]
+      gradient: "from-rose-500/20 to-transparent",
     },
     {
-      title: "Crop Recommendation System", 
-      description: "Intelligent agricultural solution that recommends optimal crops based on soil conditions, weather patterns, and environmental factors to maximize yield.",
-      tech: ["Flask", "React", "Machine Learning", "Weather API"],
-      icon: Leaf,
-      gradient: "from-green-500 to-emerald-500",
-      features: ["Weather integration", "Soil analysis", "Yield optimization"]
+      title: "Crop Recommendation System",
+      description: "Intelligent agricultural tool recommending optimal crops based on soil and environmental factors.",
+      techStack: ["Flask", "React", "ML", "Pandas"],
+      icon: Sprout,
+      gradient: "from-emerald-500/20 to-transparent",
     },
     {
       title: "Chart Generator Bot",
-      description: "Interactive web application that automatically generates beautiful, customizable charts and visualizations from user data with various chart types and export options.",
-      tech: ["React", "Chart.js", "JavaScript", "CSS3"],
+      description: "Interactive web app for generating dynamic charts and data visualizations from user inputs.",
+      techStack: ["React", "Chart.js", "TypeScript", "API"],
       icon: BarChart3,
-      gradient: "from-blue-500 to-purple-500",
-      features: ["Multiple chart types", "Data export", "Interactive UI"]
-    }
+      gradient: "from-blue-500/20 to-transparent",
+    },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-24 bg-white/[0.01] relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Featured <span className="minimal-accent">Projects</span>
+          <div className="text-center mb-20">
+            <span className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4 block">Portfolio</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Featured <span className="text-white/50">Projects</span>
             </h2>
-            <p className="text-xl text-portfolio-neutral max-w-2xl mx-auto">
-              Showcasing my passion for creating innovative solutions through code
-            </p>
-            <div className="w-24 h-1 bg-portfolio-minimal mx-auto mt-4"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div key={index} className="portfolio-card rounded-xl overflow-hidden hover-lift">
-                {/* Project Header */}
-                <div className={`p-6 bg-gradient-to-r ${project.gradient} text-white relative overflow-hidden`}>
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10"></div>
-                  <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full translate-y-8 -translate-x-8"></div>
-                  
-                  <div className="relative z-10">
-                    <project.icon className="w-12 h-12 mb-4" />
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="group relative p-6 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm overflow-hidden hover:border-white/25 transition-all duration-500"
+              >
+                {/* Hover gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="p-3 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+                      <project.icon className="w-6 h-6 text-white/60 group-hover:text-white/90 transition-colors" />
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                   </div>
-                </div>
 
-                {/* Project Content */}
-                <div className="p-6">
-                  <p className="text-portfolio-neutral mb-4 leading-relaxed">
+                  {/* Content */}
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-white transition-colors">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-white/50 text-sm leading-relaxed mb-6 group-hover:text-white/70 transition-colors">
                     {project.description}
                   </p>
 
-                  {/* Features */}
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-sm text-portfolio-neutral flex items-center">
-                          <div className="w-1.5 h-1.5 bg-portfolio-primary rounded-full mr-2"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                   {/* Tech Stack */}
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex} 
-                          className="px-3 py-1 bg-portfolio-minimal/20 text-portfolio-neutral rounded-full text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded-md text-xs bg-white/5 text-white/50 border border-white/10 group-hover:border-white/20 group-hover:text-white/70 transition-all"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex space-x-3">
+                  {/* Actions */}
+                  <div className="flex gap-3 pt-4 border-t border-white/10">
                     <Button 
-                      size="sm" 
-                      className="flex-1 bg-portfolio-minimal hover:bg-gray-600"
+                      variant="ghost" 
+                      size="sm"
+                      className="flex-1 text-white/60 hover:text-white hover:bg-white/10 transition-all"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
                     <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 border-portfolio-minimal text-portfolio-minimal hover:bg-portfolio-minimal hover:text-white"
+                      variant="ghost" 
+                      size="sm"
+                      className="flex-1 text-white/60 hover:text-white hover:bg-white/10 transition-all"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
@@ -111,22 +101,6 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <div className="portfolio-card p-8 rounded-xl inline-block">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Want to see more projects?
-              </h3>
-              <p className="text-portfolio-neutral mb-4">
-                Check out my GitHub for additional projects and contributions
-              </p>
-              <Button className="bg-portfolio-minimal hover:bg-gray-600">
-                <Github className="w-4 h-4 mr-2" />
-                View All Projects
-              </Button>
-            </div>
           </div>
         </div>
       </div>

@@ -1,105 +1,88 @@
-import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
+import { GraduationCap, Award, Calendar, BookOpen } from 'lucide-react';
 
 const Education = () => {
   const certifications = [
-    { title: "Intro to Machine Learning", provider: "Kaggle", year: "2025" },
-    { title: "Feature Engineering", provider: "Kaggle", year: "2025" },
-    { title: "Intro to Programming", provider: "Kaggle", year: "2025" },
-    { title: "Data Visualization", provider: "Kaggle", year: "2025" },
-    { title: "Intro to Machine Learning", provider: "NPTEL", year: "2025" }
+    { title: "Intro to Machine Learning", platform: "Kaggle", year: "2025" },
+    { title: "Feature Engineering", platform: "Kaggle", year: "2025" },
+    { title: "Intro to Programming", platform: "Kaggle", year: "2025" },
+    { title: "Data Visualization", platform: "Kaggle", year: "2025" },
+    { title: "Intro to Machine Learning", platform: "NPTEL", year: "2025" },
   ];
 
   return (
-    <section id="education" className="py-20 bg-background">
+    <section id="education" className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Education & <span className="minimal-accent">Certifications</span>
+          <div className="text-center mb-20">
+            <span className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4 block">Background</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              Education & <span className="text-white/50">Certifications</span>
             </h2>
-            <div className="w-24 h-1 bg-portfolio-minimal mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Education */}
-            <div className="portfolio-card p-8 rounded-xl hover-lift">
-              <div className="flex items-center mb-6">
-                <div className="p-4 bg-gradient-to-r from-portfolio-minimal to-gray-600 rounded-full mr-4">
-                  <GraduationCap className="w-8 h-8 text-white" />
+            <div className="group p-8 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.04] transition-all duration-500">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-4 rounded-2xl bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+                  <GraduationCap className="w-8 h-8 text-white/70" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Education</h3>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">B.Sc. Computer Science</h3>
+                  <p className="text-white/50">BVRIT Hyderabad</p>
+                </div>
               </div>
 
-              <div className="space-y-6">
-                <div className="border-l-4 border-portfolio-minimal pl-6 pb-6">
-                  <h4 className="text-xl font-semibold text-foreground mb-2">
-                    Bachelor of Science in Computer Science
-                  </h4>
-                  <p className="minimal-accent font-medium mb-2">
-                    BVRIT Hyderabad College of Engineering for Women
-                  </p>
-                  
-                  <div className="flex items-center space-x-4 text-portfolio-neutral mb-3">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      <span>2023 - 2027</span>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      <span>Hyderabad</span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-portfolio-minimal/20 p-4 rounded-lg mb-4">
-                    <p className="minimal-accent font-semibold">
-                      Current GPA: 7.5/10
-                    </p>
-                  </div>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center gap-3 text-white/60">
+                  <Calendar className="w-4 h-4" />
+                  <span>2023 - 2027</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="px-3 py-1 rounded-full text-sm bg-white/10 text-white/70">GPA: 7.5/10</span>
+                </div>
+              </div>
 
-                  <div>
-                    <h5 className="font-semibold text-foreground mb-2">Relevant Coursework:</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {['Data Structures', 'Machine Learning', 'Database Management Systems', 'Algorithms', 'Software Engineering'].map((course, index) => (
-                        <span key={index} className="px-3 py-1 bg-portfolio-minimal/20 text-portfolio-neutral rounded-full text-sm">
-                          {course}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div className="pt-6 border-t border-white/10">
+                <div className="flex items-center gap-2 mb-4">
+                  <BookOpen className="w-4 h-4 text-white/50" />
+                  <h4 className="text-sm uppercase tracking-wider text-white/50">Relevant Coursework</h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["Data Structures", "Machine Learning", "DBMS", "Algorithms", "Web Development"].map((course) => (
+                    <span 
+                      key={course}
+                      className="px-3 py-1.5 rounded-lg text-xs bg-white/5 text-white/60 border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 cursor-default"
+                    >
+                      {course}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
 
             {/* Certifications */}
-            <div className="portfolio-card p-8 rounded-xl hover-lift">
-              <div className="flex items-center mb-6">
-                <div className="p-4 bg-gradient-to-r from-gray-600 to-portfolio-minimal rounded-full mr-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">Certifications</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-6">
+                <Award className="w-5 h-5 text-white/50" />
+                <h3 className="text-lg font-semibold text-foreground">Certifications</h3>
               </div>
-
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center p-4 bg-gradient-to-r from-portfolio-minimal/10 to-gray-600/5 rounded-lg hover:from-portfolio-minimal/20 hover:to-gray-600/10 transition-all duration-300">
-                    <div className="w-2 h-2 bg-portfolio-minimal rounded-full mr-4 flex-shrink-0"></div>
-                    <div className="flex-grow">
-                      <h4 className="font-semibold text-foreground">{cert.title}</h4>
-                      <div className="flex items-center justify-between">
-                        <p className="text-portfolio-neutral">{cert.provider}</p>
-                        <span className="minimal-accent font-medium">{cert.year}</span>
-                      </div>
+              
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className="group/cert flex items-center justify-between p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300 cursor-default"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-2 h-2 rounded-full bg-white/30 group-hover/cert:bg-white/60 transition-colors"></div>
+                    <div>
+                      <h4 className="text-white/80 font-medium group-hover/cert:text-white transition-colors">{cert.title}</h4>
+                      <p className="text-white/40 text-sm">{cert.platform}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-
-              <div className="mt-6 p-4 bg-gradient-to-r from-portfolio-minimal/10 to-gray-600/5 rounded-lg">
-                <p className="text-portfolio-neutral text-sm">
-                  <strong>Continuous Learning:</strong> Always exploring new technologies and methodologies 
-                  to stay current with industry trends and best practices.
-                </p>
-              </div>
+                  <span className="text-white/30 text-sm">{cert.year}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
