@@ -90,7 +90,7 @@ export const PROJECTS_DATA: Project[] = [
       'Vercel',
     ],
     githubUrl: 'https://github.com/ruthika1995/docmind-ai',
-    liveDemoUrl: 'https://docmind-ai.vercel.app',
+    liveDemoUrl: 'https://docmind-ai-lfxj.onrender.com/',
     architectureDiagram: `[ Client Browser / React 19 ]
        │
        ▼ (HTTPS / SSE Streaming)
@@ -188,7 +188,7 @@ export const PROJECTS_DATA: Project[] = [
       'Impeccable UI',
     ],
     githubUrl: 'https://github.com/ruthika1995/supportflow-ai',
-    liveDemoUrl: 'https://supportflow-ai.onrender.com',
+    liveDemoUrl: 'https://supportflow-ai-96z7.onrender.com/',
     architectureDiagram: `[ Customer Message ]
          │
          ▼
@@ -294,7 +294,7 @@ export const PROJECTS_DATA: Project[] = [
       'Vercel',
     ],
     githubUrl: 'https://github.com/ruthika1995/ai-career-copilot',
-    liveDemoUrl: 'https://ai-career-copilot-backend.onrender.com',
+    liveDemoUrl: 'https://ai-career-copilot-backend-zu88.onrender.com/',
     architectureDiagram: `[ React 19 + TypeScript Client ]
        │
        ▼ (REST / JSON with JWT Auth)
@@ -391,7 +391,7 @@ export const PROJECTS_DATA: Project[] = [
       'Render',
     ],
     githubUrl: 'https://github.com/ruthika1995/teamflow-ai',
-    liveDemoUrl: 'https://teamflow-ai-app.onrender.com',
+    liveDemoUrl: 'https://teamflow-ai-be2a.onrender.com/',
     architectureDiagram: `[ React 19 Client (Linear-Style UI) ]
        │              ▲
        │ REST         │ WebSocket (Live Board Updates & Chat)

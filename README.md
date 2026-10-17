@@ -7,6 +7,7 @@
 ## 🏛️ Featured Production Projects (Deployed on Render & Vercel)
 
 ### 1. [DocMind AI](https://github.com/ruthika1995/docmind-ai) — Enterprise Document Intelligence & Grounded RAG Platform
+- **Live Demo:** [docmind-ai-lfxj.onrender.com](https://docmind-ai-lfxj.onrender.com/)
 - **Concept:** Enterprise IDP system with an OpenRouter AI Gateway and decoupled 384-dimensional dense semantic embeddings.
 - **5 Core Pipelines:**
   1. OpenRouter few-shot document taxonomy classification (Invoice, Contract, Resume, Financial Report).
@@ -18,6 +19,7 @@
 - **Deployment:** Render (FastAPI Web Service) + Vercel (React Frontend).
 
 ### 2. [SupportFlow AI](https://github.com/ruthika1995/supportflow-ai) — Autonomous Customer Support & Agentic Operations Platform
+- **Live Demo:** [supportflow-ai-96z7.onrender.com](https://supportflow-ai-96z7.onrender.com/)
 - **Concept:** Full-stack agentic platform with a ReAct (Reason + Act) loop, real database tool mutations, and a Human-in-the-Loop (HITL) supervisor safety gate.
 - **Key Capabilities:**
   1. ReAct Agent Orchestrator: Dynamic intent classification, database tools (`get_order_status`, `cancel_order`, `request_refund`), and observation loops.
@@ -29,6 +31,7 @@
 - **Deployment:** Render + Vercel / Docker.
 
 ### 3. [AI Career Copilot](https://github.com/ruthika1995/ai-career-copilot) — Production Career Intelligence & ATS Match Platform
+- **Live Demo:** [ai-career-copilot-backend-zu88.onrender.com](https://ai-career-copilot-backend-zu88.onrender.com/)
 - **Concept:** High-performance career intelligence platform replacing generic resume scores with transparent, multi-weight deterministic matching.
 - **Key Capabilities:**
   1. 5-Dimensional Match Engine: 40% Tech Stack, 25% Project Alignment, 20% Experience, 10% Education, 5% Soft Skills.
@@ -40,6 +43,7 @@
 - **Deployment:** Render Web Service + Vercel Frontend.
 
 ### 4. [TeamFlow AI](https://github.com/ruthika1995/teamflow-ai) — Real-Time Collaboration & AI Project Management Platform
+- **Live Demo:** [teamflow-ai-be2a.onrender.com](https://teamflow-ai-be2a.onrender.com/)
 - **Concept:** Full-stack collaborative workspace combining Linear-style Kanban boards, team chat, asynchronous meeting transcript synthesis, and an AI Project Assistant.
 - **Key Capabilities:**
   1. Real-Time Kanban Board: WebSocket state synchronization across team members (<10ms).
