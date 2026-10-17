@@ -328,4 +328,105 @@ export const PROJECTS_DATA: Project[] = [
     gradient: 'from-purple-500/20 via-pink-500/10 to-transparent',
     glowColor: 'purple',
   },
+  {
+    id: 'teamflow-ai',
+    title: 'TeamFlow AI',
+    tagline: 'Real-Time Collaboration & AI-Powered Project Management Platform',
+    category: 'Full-Stack SaaS',
+    badge: 'Production Ready • Render Unified',
+    overview:
+      'High-performance, full-stack collaborative project workspace combining Linear-style Kanban boards, team chat, asynchronous meeting transcript synthesis, and an AI Project Assistant. Built with FastAPI, SQLite/PostgreSQL, WebSockets for instant state synchronization, and an OpenRouter AI Gateway for sprint planning, risk detection, and milestone generation.',
+    status: 'Live on Render',
+    deployment: {
+      backend: 'FastAPI Python 3.12 (Unified Single-Port Host)',
+      frontend: 'React 19 + TypeScript + Vite (Mounted SPA)',
+      database: 'SQLite (zero-config) / PostgreSQL Compatible',
+      aiGateway: 'OpenRouter (Meta Llama 3.3 70B Instruct)',
+    },
+    metrics: [
+      { label: 'Real-Time Sync', value: 'WebSockets <10ms' },
+      { label: 'AI Sprint Planning', value: 'Automated Epics' },
+      { label: 'Meeting Extraction', value: 'Tasks & Blockers' },
+      { label: 'Deployment Model', value: 'Unified Port 10000' },
+    ],
+    keyCapabilities: [
+      {
+        title: 'Linear-Inspired Kanban Board',
+        description:
+          'High-density drag-and-drop task workflows with priority tags, assignee assignments, deadlines, comments, and sub-second status transitions.',
+      },
+      {
+        title: 'Autonomous AI Sprint & Epic Planner',
+        description:
+          'Converts project requirements or PRDs into structured, estimated tasks, technical milestones, and dependency trees with one click.',
+      },
+      {
+        title: 'Meeting Transcript Task Extractor',
+        description:
+          'Processes asynchronous meeting transcripts, automatically highlighting blockers, action items, and creating structured Jira/Linear-ready task cards.',
+      },
+      {
+        title: 'Real-Time Workspace Chat & Copilot',
+        description:
+          'Integrated team chat with presence and WebSocket broadcasting, paired with an AI Workspace Copilot capable of querying workspace status and blockers.',
+      },
+      {
+        title: 'Role-Based Workspace Governance',
+        description:
+          'Supports multi-tenant workspaces with role-based access control (Owner, Admin, Member, Viewer) and cryptographic JWT token sessions.',
+      },
+    ],
+    techStack: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'FastAPI',
+      'Python',
+      'WebSockets',
+      'SQLAlchemy 2.0',
+      'SQLite',
+      'OpenRouter API',
+      'Llama 3.3 70B',
+      'Docker',
+      'Render',
+    ],
+    githubUrl: 'https://github.com/ruthika1995/teamflow-ai',
+    liveDemoUrl: 'https://teamflow-ai-app.onrender.com',
+    architectureDiagram: `[ React 19 Client (Linear-Style UI) ]
+       │              ▲
+       │ REST         │ WebSocket (Live Board Updates & Chat)
+       ▼              │
+[ FastAPI Unified Backend on Render ]
+  ├── JWT Auth & Role-Based Access Control
+  ├── WebSocket Connection Manager (Pub/Sub)
+  ├── OpenRouter AI Gateway (Llama 3.3 70B)
+  │     ├── Automated Sprint Planner
+  │     ├── Transcript Action Item Extractor
+  │     └── Workspace Copilot & Risk Analyzer
+  └── SQLAlchemy ORM (SQLite / PostgreSQL)`,
+    keyDesignDecisions: [
+      {
+        question: 'Why serve frontend and backend from a single unified container on Render?',
+        answer:
+          'Eliminates cross-origin CORS latency, simplifies SSL/DNS management, avoids multi-service cost tiers on Render, and allows atomic frontend and backend deployments.',
+      },
+      {
+        question: 'How does TeamFlow AI ensure AI recommendations are grounded and safe?',
+        answer:
+          'The AI Project Assistant acts in an advisory capacity: generating draft tasks, risk assessments, and sprint epics for human team review rather than modifying database state autonomously without confirmation.',
+      },
+      {
+        question: 'Why use WebSockets instead of polling for Kanban updates?',
+        answer:
+          'WebSockets deliver sub-10ms state synchronization across team members, preventing conflicting drag-and-drop board edits and delivering instant team chat messages.',
+      },
+    ],
+    interviewTalkingPoints: [
+      'Architected a unified full-stack SaaS container serving a React 19 SPA and FastAPI REST/WebSocket endpoints on a single Render instance.',
+      'Designed real-time team collaboration with WebSocket broadcasting for instant Kanban state updates and messaging.',
+      'Implemented OpenRouter generative AI pipelines for automated meeting action item extraction and deterministic sprint planning.',
+    ],
+    gradient: 'from-blue-500/20 via-indigo-500/10 to-transparent',
+    glowColor: 'blue',
+  },
 ];

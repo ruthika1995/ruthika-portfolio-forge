@@ -65,7 +65,7 @@ const Hero = () => {
                 className="group relative bg-white text-black hover:bg-white/90 font-semibold px-8 py-6 text-sm md:text-base rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] flex items-center gap-2"
               >
                 <Sparkles className="w-4 h-4 text-emerald-600" />
-                Explore 3 Deployed Projects
+                Explore 4 Deployed Projects
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Button>
             </a>

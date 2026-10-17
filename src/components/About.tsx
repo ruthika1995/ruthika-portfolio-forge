@@ -115,7 +115,7 @@ const About = () => {
                 </div>
 
                 <p className="text-white/60 text-xs md:text-sm leading-relaxed">
-                  My recent projects include <strong>DocMind AI</strong> (an enterprise IDP & RAG platform with clause diffing), <strong>SupportFlow AI</strong> (an autonomous ReAct customer ops desk with WebSockets), and <strong>AI Career Copilot</strong> (a 5-dimensional candidate match assessment platform).
+                  My featured projects include <strong>DocMind AI</strong> (enterprise IDP & RAG platform with clause diffing), <strong>SupportFlow AI</strong> (autonomous ReAct customer ops desk with WebSockets), <strong>AI Career Copilot</strong> (5-dimensional candidate match assessment platform), and <strong>TeamFlow AI</strong> (real-time collaboration & Kanban platform with AI project management).
                 </p>
               </div>
 
