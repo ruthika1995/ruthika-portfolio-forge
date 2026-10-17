@@ -294,7 +294,7 @@ export const PROJECTS_DATA: Project[] = [
       'Vercel',
     ],
     githubUrl: 'https://github.com/ruthika1995/ai-career-copilot',
-    liveDemoUrl: 'https://ai-career-copilot-backend-zu88.onrender.com/',
+    liveDemoUrl: 'https://ai-career-copilot-vert.vercel.app/',
     architectureDiagram: `[ React 19 + TypeScript Client ]
        │
        ▼ (REST / JSON with JWT Auth)

@@ -31,7 +31,7 @@
 - **Deployment:** Render + Vercel / Docker.
 
 ### 3. [AI Career Copilot](https://github.com/ruthika1995/ai-career-copilot) — Production Career Intelligence & ATS Match Platform
-- **Live Demo:** [ai-career-copilot-backend-zu88.onrender.com](https://ai-career-copilot-backend-zu88.onrender.com/)
+- **Live Demo:** [ai-career-copilot-vert.vercel.app](https://ai-career-copilot-vert.vercel.app/)
 - **Concept:** High-performance career intelligence platform replacing generic resume scores with transparent, multi-weight deterministic matching.
 - **Key Capabilities:**
   1. 5-Dimensional Match Engine: 40% Tech Stack, 25% Project Alignment, 20% Experience, 10% Education, 5% Soft Skills.
