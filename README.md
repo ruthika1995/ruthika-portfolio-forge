@@ -1,6 +1,6 @@
 # S Ruthika — Generative AI & Full-Stack Portfolio 🚀
 
-> **Production Engineering Portfolio** showcasing 3 end-to-end deployed AI platforms powered by **FastAPI (Python 3.12)**, **React 19 + TypeScript**, **OpenRouter Multi-Model Gateways**, and **Decoupled Local Vector Embeddings**.
+> **Production Engineering Portfolio** showcasing 4 end-to-end deployed AI platforms powered by **FastAPI (Python 3.12)**, **React 19 + TypeScript**, **OpenRouter Multi-Model Gateways**, and **Decoupled Local Vector Embeddings**.
 
 ---
 
@@ -38,6 +38,17 @@
   5. Dynamic Milestone Roadmaps: Step-by-step learning progression.
 - **Tech Stack:** React 19, TypeScript, Tailwind CSS, FastAPI, Python, PyMuPDF, JWT Auth, SQLite / PostgreSQL, OpenRouter.
 - **Deployment:** Render Web Service + Vercel Frontend.
+
+### 4. [TeamFlow AI](https://github.com/ruthika1995/teamflow-ai) — Real-Time Collaboration & AI Project Management Platform
+- **Concept:** Full-stack collaborative workspace combining Linear-style Kanban boards, team chat, asynchronous meeting transcript synthesis, and an AI Project Assistant.
+- **Key Capabilities:**
+  1. Real-Time Kanban Board: WebSocket state synchronization across team members (<10ms).
+  2. AI Sprint Planner: Analyzes backlog items and capacity to generate balanced sprint epics.
+  3. Meeting Transcript Task Extractor: Converts meeting notes into actionable Jira/Linear-ready task cards.
+  4. Workspace Governance & RBAC: Multi-tenant role permissions (Owner, Admin, Member, Viewer).
+  5. Unified Deployment: High-throughput single-container hosting on Render with Docker.
+- **Tech Stack:** React 19, TypeScript, FastAPI, Python 3.12, WebSockets, SQLAlchemy 2.0, SQLite, OpenRouter API (Llama 3.3 70B), Docker, Render.
+- **Deployment:** Render Web Service + Docker.
 
 ---
 

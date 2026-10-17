@@ -72,7 +72,7 @@ const About = () => {
               {/* Quick Stat Pill */}
               <div className="p-4 rounded-2xl border border-white/10 bg-white/[0.02] flex items-center justify-between text-xs">
                 <span className="text-white/50">Production AI Systems:</span>
-                <span className="font-mono font-bold text-white">3 Deployed to Cloud</span>
+                <span className="font-mono font-bold text-white">4 Deployed to Cloud</span>
               </div>
             </div>
 

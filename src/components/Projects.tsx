@@ -27,13 +27,13 @@ const Projects = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold mb-4 tracking-wide uppercase">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Production Portfolio • 3 End-to-End Deployed Systems
+              Production Portfolio • 4 End-to-End Deployed Systems
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Featured <span className="text-white/40">AI Projects</span>
             </h2>
             <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto mt-4 font-light">
-              Autonomous agentic systems, grounded RAG platforms, and multi-weight AI matching engines—fully deployed on Render and Vercel.
+              Autonomous agentic systems, grounded RAG platforms, multi-weight AI matching engines, and real-time collaborative workspaces—fully deployed on Render and Vercel.
             </p>
 
             {/* Category Filter Pills */}
@@ -56,7 +56,7 @@ const Projects = () => {
           </div>
 
           {/* Project Cards Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}

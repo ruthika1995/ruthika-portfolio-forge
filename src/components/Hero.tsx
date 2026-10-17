@@ -42,7 +42,7 @@ const Hero = () => {
           {/* Key Metrics Strip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto pt-2">
             {[
-              { value: '3', label: 'Production AI Apps Deployed', highlight: 'Render & Vercel' },
+              { value: '4', label: 'Production AI Apps Deployed', highlight: 'Render & Vercel' },
               { value: '384-Dim', label: 'Dense Semantic Vector Search', highlight: 'Zero Token Cost' },
               { value: 'FastAPI + React', label: 'Full-Stack Modern Stack', highlight: 'Python 3.12 & TS' },
               { value: '7.5 GPA', label: 'B.Sc. Computer Science', highlight: 'BVRIT Hyderabad' },

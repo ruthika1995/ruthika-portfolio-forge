@@ -145,7 +145,7 @@ const ArchitectureSection = () => {
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
                 <a href="#projects" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-black font-semibold text-xs hover:bg-white/90 transition-all flex items-center justify-center gap-2">
-                    Inspect 3 Projects
+                    Inspect 4 Projects
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </a>
